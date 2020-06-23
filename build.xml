@@ -12,7 +12,7 @@
         <fileset dir="./WebContent/WEB-INF/lib" includes="*.jar" />
         <!-- Libraries inside server lib folder like, Servlet, JSP -->
        <!--  <fileset dir="D:\omnichannelCaseLead\apachejames_vivek_sir\New folder\apache-tomcat-8.5.55\lib" includes="*.jar" /> -->
-        <fileset dir="D:\omnichannelCaseLead\apachejames_vivek_sir\New folder\apache-tomcat-8.5.55\lib" includes="*.jar" />
+       <!--  <fileset dir="D:\omnichannelCaseLead\apachejames_vivek_sir\New folder\apache-tomcat-8.5.55\lib" includes="*.jar" /> -->
     </path>
 
     <target name="clean">
