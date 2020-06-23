@@ -5,7 +5,7 @@
     <property name="src" location="./src" />
     <property name="classes" location="./build/classes" />
     <!-- <property name="deployDest" location="D:\omnichannelCaseLead\apachejames_vivek_sir\New folder\apache-tomcat-8.5.55\webapps" /> -->
-    <property name="deployDest" location="/var/lib/jenkins/workspace" />
+    <property name="deployDest" location="/var/lib/jenkins/workspace/JenKinsDynamicWebToAnt" />
 
     <path id="project-classpath">
         <!-- Libraries inside project lib folder like, Spring, Logging, Hibernate -->
@@ -35,7 +35,7 @@
             </fileset>
         </delete>
         <echo> Removed war files inside Server!</echo>
-        <delete dir="${deployDest}/appajimama">
+        <delete dir="${deployDest}/JenKinsDynamicWebToAnt">
         </delete>
         <echo> Removed Previous Deployment inside Server!</echo>
     </target>
@@ -45,7 +45,7 @@
         <echo> Java file compiled and copied to classes folder !</echo>
     </target>
     <target name="buildwar" description="Building War File" depends="compile">
-        <war destfile="./build/appajimama.war" webxml="./WebContent/WEB-INF/web.xml">
+        <war destfile="./build/JenKinsDynamicWebToAnt.war" webxml="./WebContent/WEB-INF/web.xml">
             <fileset dir="./WebContent">
                 <include name="**/*.jsp" />
                 <include name="*/*.xml" />
@@ -57,7 +57,7 @@
         </war>
     </target>
     <target name="deploy" depends="buildwar,cleanDeploy">
-        <copy file="./build/appajimama.war" todir="${deployDest}" overwrite="true">
+        <copy file="./build/JenKinsDynamicWebToAnt.war" todir="${deployDest}" overwrite="true">
         </copy>
     </target>
 
